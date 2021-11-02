@@ -1,0 +1,273 @@
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+.background
+{
+    background-image: url("../img/template-bg.png");
+    /* background-color: black; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: auto;
+    background-size: cover;
+    height: 100%;
+
+}
+
+.main-continer
+{
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.card
+{
+    margin-left: 20px;
+}
+
+/* navbar design overall */
+.navbar
+{
+     text-align: center;
+     padding: 50px;
+     padding-top: 0;
+     padding-bottom: 0;
+}
+.navbar-brand
+{
+     margin-right:40px;
+}
+
+.bg-nav-color
+{
+     background-color:#fdd55c;
+}
+
+/* right dropdown design */
+.dropdown
+{
+     height: 1vh;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center; 
+}
+
+.signed_in_as
+{
+     position: relative;
+}
+
+ .signed_in_as ul
+{
+     position: absolute;
+     background:#a98f43;
+     margin:0;
+     margin-top:10px;
+     height:180px;
+     width:300px;
+      display: flex;   
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     list-style: none;
+     border-radius: 10px;
+     padding:0;
+     opacity: 0;
+     pointer-events: none;
+     transform: translateY(-10px);
+     transition: all 0.4s ease;
+     z-index:9999;
+     /* cursor: pointer; */
+} 
+
+.signed_in_as a
+{
+     color: white;
+     font-weight: bold;
+     text-decoration: none;
+     margin:0;
+     padding-left:60px;
+     padding-right:60px;
+     padding-top:8px;
+     padding-bottom:8px;
+
+}
+
+.signed_in_as li
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+
+
+.signed_in_as li:hover
+{
+     background-color: #f3cf7a;
+     margin:0px;
+     pointer-events: all;
+}
+
+
+.dropdown button
+{
+     background: none;
+     border: none;
+     text-decoration:none;
+     color: black;
+     font-size: 18px;
+     cursor: pointer;
+     pointer-events: all;
+}
+
+.dropdown button:hover
+{
+     color:black;
+     pointer-events: all;
+}
+
+.signed_in_as button:focus + ul
+{
+     
+     opacity: 1;
+     pointer-events: all;
+     transform:translateY(0px);
+} 
+
+/* home change icon design */
+
+/* main page */
+.row
+{
+     margin:0;
+     padding:0;
+}
+.body_design_main
+{
+     margin:30px;
+     background-color: rgba(255, 255, 255, 0.73);
+     border-radius: 20px;
+     /* height: 790px; */
+     padding:17px;
+     padding-bottom:50px;
+     box-shadow: 7px 5px 15px 1px #888888;
+}
+
+.panel_design_title
+{
+    padding:0;     
+    margin-bottom: 15px;
+    border-bottom: 3px solid #717070;
+}
+
+/* side page */
+.body_design_side
+{
+     margin-top:35px;
+     padding:0;
+}
+
+.body_design_side ul
+{
+    margin:0px;
+    padding:0px;
+     align-items: center;
+     list-style: none;
+     
+}
+.body_design_side li
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:15px;
+}
+
+/* button side effect / design */
+.expanding
+{
+    transition:width 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    background-color:#a98f43;
+    display: flex;
+    padding-left:10px;
+    align-items: center;
+    /* z-index:9999; */
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.expanding:hover
+{
+     width:250px;
+     height:50px;
+     background-color: #a98f43;
+     text-decoration: none;
+}
+.expanding i
+{
+     display:none; 
+     text-decoration: none;   
+}
+.expanding:hover i
+{
+     margin-left:10px;
+     display:inline-block;
+     transition:width 0.3s ease-in-out;
+     color: white;
+     font-weight:bold;
+     
+}
+
+/*  */
+.modal-dialog, .modal-xl
+{
+     @media (min-width: 768px) {
+          .modal-xl {
+           width: 90%;
+           max-width:2240px;
+          }
+        }
+}
+.card-header, .modal-header
+{
+     background-color: #b79530;
+}
+
+.card-header button, .modal-header
+{
+     color: white;
+     font-weight: 700;
+}
+.card-body, .modal-body, .modal-footer, .card-footer
+{
+     background-color: #e4dec8; 
+}
+
+
+/* KAHIT ANO DITO  */
+

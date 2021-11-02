@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="img/tms-logo.png" type="image/gif" sizes="16x16">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="template1_css/main_style.css">
+
+    <title>Tool Management System</title>
+    
+  </head>
+  <body class="background">
+    
+  
+  <!-- navbar-->
+  <header>
+    <nav class="navbar navbar-light bg-nav-color">
+      <div class="main_page_logo">
+        <a class="navbar-brand" href="#">
+          <img src="img/tms-logo.png" width="50" height="50" alt="" loading="lazy">
+          <span>
+            Tool Management System
+          </span>
+        </a>
+
+        <a href="#" onclick="btn_menu_click_off();" id="nav_menu_off">
+          <span class="iconify" data-icon="flat-color-icons:home" height="40"  data-inline="false" ></span>
+          <img src="img/offbtn.png" width="35" height="18" alt="" loading="lazy">
+        </a>
+
+        <a href="#" onclick="btn_menu_click_on();"  id="nav_menu_on">
+          <span class="iconify" data-icon="flat-color-icons:home" height="40"  data-inline="false" ></span>
+          <img src="img/onbtn.png" width="35" height="18" alt="" loading="lazy">
+        </a>
+     </div>
+      <div class="dropdown">
+        <div class="signed_in_as">
+          <button class="btn">
+            <small>Signed in as </small>&nbsp;
+            <img src="img/undraw_profile_pic_ic5t.png" style="border-radius:50%;" width="50" height="50" alt="" loading="lazy">&nbsp;
+            <span style="color:#349c5e;font-weight:900;">
+              Allan Daile Vida          
+            </span>
+          </button>
+          <ul>
+            <li><a href="#">User Manual</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="row col-lg-12">
+    <div class="" id="sidebar_design">
+      <!-- side bar -->
+      <div class="panel panel-default">
+        <div class="panel-body body_design_side">
+          <ul>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-configuration" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-backup" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-encryption" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-protection" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-recovery" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="expanding">
+                <span class="iconify" data-icon="flat-color-icons:data-configuration" data-inline="false"  width="25" height="25"></span>
+                <i>MANAGEMENT MODULE</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+    <div class="col-lg 11">
+      <!-- main content -->
+      <div class="panel panel-default">
+        <div class="panel-body body_design_main">
+          <div class="panel_design_title">
+            <h4><span class="iconify" data-icon="flat-color-icons:bullish" data-inline="false" width="35" height="35"></span>
+            PLEASE INSERT TITLE HERE 
+            </h4>
+          </div>
+          <div class="panel_body_content">
+
+              CONTENT AREA HERE!!!
+
+              <H1>TOAST SIDE</H1>
+              <button class="btn btn-warning" onclick="toast_message();">CLICK HERE</button>
+
+              <H1>ALERT MESSEGE</H1>
+              <button class="btn btn-warning" onclick="alert_message();">CLICK HERE</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+ 
+  
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+    <script src="node_modules/js/iconify.min.js"></script>
+    <script src="node_modules/js/sweetalert2.js"></script>
+
+    <script>
+    $('#nav_menu_on').hide();
+    
+    function btn_menu_click_off()
+    {
+      $('#nav_menu_on').show();
+      $('#nav_menu_off').hide();
+      $('#sidebar_design').hide();
+    }
+    function btn_menu_click_on()
+    {
+      $('#nav_menu_on').hide();
+      $('#nav_menu_off').show();
+      $('#sidebar_design').show();
+    }
+
+    function toast_message()
+    {
+        
+        Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1000
+        });
+    }
+
+    function alert_message()
+    {
+        Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+            )
+        }
+        });
+    }
+    </script>
+
+
+
+  </body>
+</html>
